@@ -14,7 +14,7 @@ int main()
   cin>>columnB;//input column number of Matrix B
   if(rowA==0||rowB==0||columnA==0||columnB==0)//judge whether the matrix is null or not
     {
-      cout<<"Null matrix please try again"<<endl;
+      cout<<"Invalid  matrix form  please try again"<<endl;
       return 1;
     }
   else if(rowB!=columnA)//judge whether the two matrix can multiple or not
