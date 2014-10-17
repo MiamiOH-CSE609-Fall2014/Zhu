@@ -37,7 +37,7 @@ while(true)
     }
     
     cout<<"Enter the score:\n";
-    cin>>score;
+    cin>>score;// if the score is not a number then error
     if(cin.fail())
       {
 	cin.clear();
