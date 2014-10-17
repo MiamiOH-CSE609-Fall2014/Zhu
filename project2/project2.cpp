@@ -10,8 +10,8 @@
 using namespace std;
 //set up sum average value and standard deviation
 double sum=0.0;
-double avg=0.0;
-double std_dev=0.0;
+double avg=0.0;//average value
+double std_dev=0.0;//standard deviation
 //set up vector for store data of name scores and grade 
 vector<string> name_list;
 vector<double> scores_list;
@@ -38,6 +38,12 @@ while(true)
     
     cout<<"Enter the score:\n";
     cin>>score;
+    if(cin.fail())
+      {
+	cin.clear();
+	cin.ignore();
+	throw out_of_range("invalid score input");
+      }
     cin.ignore();
     // set the out of range error make score between 0-100
     if(score<0.0||score>100.0)
@@ -53,7 +59,7 @@ while(true)
     } 
   }
 }
-// calculate the and value the grade of student
+//function for calculating the and value the grade of student
 char grade_out(double st_score)
 {
   if(st_score>=(avg+(1.5*std_dev)))
