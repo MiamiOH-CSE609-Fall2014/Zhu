@@ -17,9 +17,9 @@ map<char,int> gene_rank={{'A',0},{'G',1},{'C',2},{'T',3}};
        {
 	 totalscore=0;tempscore=0;
 	 hayPart=haystack.substr(i,needle.length());
-	 for(int j=0;j<needle.length();j++)
+	 for(int i=0;i<needle.length();i++)
 	   {
-	     tempscore=score_Matrix[gene_rank[hayPart[i]]][gene_rank[needle[j]]];
+	     tempscore=score_Matrix[gene_rank[hayPart[i]]][gene_rank[needle[i]]];
 	     totalscore+=tempscore;
 	   }
 	 if(totalscore>=Max_score.second)
